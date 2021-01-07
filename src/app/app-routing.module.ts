@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: '3', component: SearchComponent },
   { path: '4', component: ErrorHandlingComponent },
   { path: '5', component: ErrorIsolationComponent },
-  { path: '6', component: RouterComponent, children: [{ path: ':char', component: RouterComponent,  }] },
+  { path: '6/:char', component: RouterComponent },
+  { path: '6', component: RouterComponent },
 ];
 
 @NgModule({

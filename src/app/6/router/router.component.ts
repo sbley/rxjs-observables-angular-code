@@ -3,12 +3,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { Product } from '../../model/product';
 import { ProductsService } from '../products.service';
-import { filter, map, switchMap, takeUntil } from 'rxjs/operators';
+import { filter, map, switchMap, takeUntil, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-router',
   template: `<div>
-      <a *ngFor="let c of alphabet" [routerLink]="c">[{{ c }}] </a>
+      <a *ngFor="let c of alphabet" [routerLink]="'/6/' + c">[{{ c }}] </a>
     </div>
     <div *ngFor="let p of products$ | async">{{ p.name }}</div>`,
 })
